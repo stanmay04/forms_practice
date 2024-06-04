@@ -1,0 +1,7 @@
+<p>temp-forms works!</p>
+
+<form #tempform="ngForm" (ngSubmit)="submit(tempform.value)">
+<input type="text" name="name" ngModel>
+<input type="Password" name="Password" ngModel>
+<button type="submit">login</button>
+</form>
