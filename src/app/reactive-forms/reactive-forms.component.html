@@ -1,6 +1,9 @@
 <p>reactive-forms works!</p>
 <form [formGroup]="loginform" (ngSubmit)="submit()">
+    <div>
 <input type="text" name="username"  formControlName="username">
+<span *ngIf="loginform.get('username')?.invalid && loginform.get('username')?.touched">Email is required</span>
+</div>
 <input type="password" name="password"  formControlName="password">
-<button type="submit">login</button>
+<button type="submit" [disabled]="loginform.invalid">login</button>
 </form>

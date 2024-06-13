@@ -15,7 +15,7 @@ console.warn(formsdata);
 
   p = new Promise((res:any,reject:any)=>{
     setTimeout(()=>{
-      reject('hello')
+      res('hello')
       console.log("HEYYYY")
     },2000);
   })
